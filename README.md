@@ -1,4 +1,4 @@
-# 🎮 DissasterCL Multiverse - Simple Stream Hub
+# 🎮 DissasterCL Multiverse - Live Streams 🎮
 
 Este sitio muestra en tiempo real mis transmisiones en vivo desde:
 
@@ -10,35 +10,33 @@ Este sitio muestra en tiempo real mis transmisiones en vivo desde:
 
 ## ✨ Características
 
-- 🌙 Modo oscuro fijo para una experiencia visual más agradable
-- 📱 Diseño adaptable para móviles y tablets
+- 🌙 Modo oscuro fijo
+- 📱 Diseño adaptable: 3 columnas en escritorio, 1 en móvil
 - 🔴 Detección automática de transmisiones en vivo
-- 📺 Diseño limpio y sin distracciones
-- 🚫 Sin chats embebidos ni reordenamiento
 
 ---
 
-## 🌐 Visítame en redes sociales
+## 🌐 Redes Sociales
 
-<div align="center" style="background-color:#121212">
+<div align="center">
 
 <a href="https://www.youtube.com/@dissasterCL" target="_blank">
-  <img src="https://raw.githubusercontent.com/detain/svg-social-icons/master/icons-white/youtube-white.svg" width="30" />
+  <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/YouTube_social_white_squircle.svg" width="30" />
 </a>&nbsp;
 <a href="https://www.twitch.tv/dissastercl" target="_blank">
-  <img src="https://raw.githubusercontent.com/detain/svg-social-icons/master/icons-white/twitch-white.svg" width="30" />
+  <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Twitch_glitch_logo_white.svg" width="30" />
 </a>&nbsp;
 <a href="https://kick.com/dissastercl" target="_blank">
   <img src="https://raw.githubusercontent.com/wervlad/social-icons/main/kick.svg" width="30" />
 </a>&nbsp;
 <a href="https://facebook.com/dissastercl" target="_blank">
-  <img src="https://raw.githubusercontent.com/detain/svg-social-icons/master/icons-white/facebook-white.svg" width="30" />
+  <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.svg" width="30" />
 </a>&nbsp;
 <a href="https://x.com/dissastercl" target="_blank">
-  <img src="https://raw.githubusercontent.com/detain/svg-social-icons/master/icons-white/twitter-white.svg" width="30" />
+  <img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/X_logo_2023.svg" width="30" />
 </a>&nbsp;
 <a href="https://www.instagram.com/dissastercl" target="_blank">
-  <img src="https://raw.githubusercontent.com/detain/svg-social-icons/master/icons-white/instagram-white.svg" width="30" />
+  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" width="30" />
 </a>
 
 </div>
