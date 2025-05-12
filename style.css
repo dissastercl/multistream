@@ -11,21 +11,19 @@ header {
 }
 h1 {
   margin: 0;
+  font-size: 1.8rem;
 }
 .stream-grid {
-  display: flex;
-  justify-content: center;
-  flex-wrap: nowrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 20px;
   padding: 20px;
-  overflow-x: auto;
 }
 .stream-box {
   background: #222;
   padding: 10px;
   border-radius: 10px;
-  width: 32%;
-  min-width: 300px;
+  width: 100%;
 }
 .stream-box iframe {
   width: 100%;
@@ -63,13 +61,4 @@ footer {
 }
 .social-bar img:hover {
   transform: scale(1.2);
-}
-@media (max-width: 1000px) {
-  .stream-grid {
-    flex-wrap: wrap;
-  }
-  .stream-box {
-    width: 100%;
-    max-width: 90vw;
-  }
 }

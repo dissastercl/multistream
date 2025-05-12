@@ -1,6 +1,6 @@
 # 🎮 DissasterCL Multiverse - Live Streams 🎮
 
-Este sitio muestra en tiempo real mis transmisiones en vivo desde:
+Bienvenido a mi centro de transmisiones **multiplataforma**. Aquí puedes verme en **vivo** desde:
 
 - 🟥 **YouTube**
 - 🟣 **Twitch**
@@ -10,9 +10,11 @@ Este sitio muestra en tiempo real mis transmisiones en vivo desde:
 
 ## ✨ Características
 
-- 🌙 Modo oscuro fijo
-- 📱 Diseño adaptable: 3 columnas en escritorio, 1 en móvil
-- 🔴 Detección automática de transmisiones en vivo
+- ✅ Reproducción simultánea de transmisiones de 3 plataformas
+- 📱 Diseño **responsive** con columnas adaptables
+- 🔴 Indicadores EN VIVO automáticos
+- 🌙 Estilo oscuro moderno y minimalista
+- 🎮 Ideal para usar en GitHub Pages
 
 ---
 
@@ -21,22 +23,22 @@ Este sitio muestra en tiempo real mis transmisiones en vivo desde:
 <div align="center">
 
 <a href="https://www.youtube.com/@dissasterCL" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/YouTube_social_white_squircle.svg" width="30" />
+  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" width="30" style="filter: invert(1);" />
 </a>&nbsp;
 <a href="https://www.twitch.tv/dissastercl" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Twitch_glitch_logo_white.svg" width="30" />
+  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitch.svg" width="30" style="filter: invert(1);" />
 </a>&nbsp;
 <a href="https://kick.com/dissastercl" target="_blank">
-  <img src="https://raw.githubusercontent.com/wervlad/social-icons/main/kick.svg" width="30" />
+  <img src="https://raw.githubusercontent.com/wervlad/social-icons/main/kick.svg" width="30" style="filter: invert(1);" />
 </a>&nbsp;
 <a href="https://facebook.com/dissastercl" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.svg" width="30" />
+  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" width="30" style="filter: invert(1);" />
 </a>&nbsp;
 <a href="https://x.com/dissastercl" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/X_logo_2023.svg" width="30" />
+  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" width="30" style="filter: invert(1);" />
 </a>&nbsp;
 <a href="https://www.instagram.com/dissastercl" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" width="30" />
+  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" width="30" style="filter: invert(1);" />
 </a>
 
 </div>
@@ -53,5 +55,5 @@ Este sitio muestra en tiempo real mis transmisiones en vivo desde:
 
 ## 🧠 Creado por
 
-**@dissasterCL** con HTML + CSS + JS  
-Backend Vercel para detectar transmisiones en vivo
+**@dissasterCL**  
+Hecho con HTML + CSS + JS + Vercel API Backend
