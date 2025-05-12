@@ -21,14 +21,16 @@ Bienvenido a mi centro de transmisiones **multiplataforma**. Aquí puedes verme 
 
 ## 📸 Redes Sociales
 
-Sígueme y forma parte de la comunidad:
+<div align="center">
 
-[![YouTube](https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg)](https://www.youtube.com/@dissasterCL)
-[![Twitch](https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitch.svg)](https://www.twitch.tv/dissastercl)
-[![Kick](https://raw.githubusercontent.com/wervlad/social-icons/main/kick.svg)](https://kick.com/dissastercl)
-[![Facebook](https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg)](https://facebook.com/dissastercl)
-[![X](https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg)](https://x.com/dissastercl)
-[![Instagram](https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg)](https://www.instagram.com/dissastercl)
+<a href="https://www.youtube.com/@dissasterCL" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" width="30" /></a>&nbsp;
+<a href="https://www.twitch.tv/dissastercl" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitch.svg" width="30" /></a>&nbsp;
+<a href="https://kick.com/dissastercl" target="_blank"><img src="https://raw.githubusercontent.com/wervlad/social-icons/main/kick.svg" width="30" /></a>&nbsp;
+<a href="https://facebook.com/dissastercl" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" width="30" /></a>&nbsp;
+<a href="https://x.com/dissastercl" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" width="30" /></a>&nbsp;
+<a href="https://www.instagram.com/dissastercl" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" width="30" /></a>
+
+</div>
 
 ---
 
