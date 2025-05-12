@@ -32,7 +32,6 @@ document.getElementById('stream-container').addEventListener('drop', (e) => {
   }
 });
 
-// 🔁 Verifica si estás en vivo y actualiza estado
 fetch("https://vercel-status-api.vercel.app/api/status")
   .then(res => res.json())
   .then(data => {
@@ -50,6 +49,6 @@ fetch("https://vercel-status-api.vercel.app/api/status")
       document.getElementById("twitch-status").classList.add("offline");
     }
 
-    document.getElementById("kick-status").classList.add("offline"); // sin API
+    document.getElementById("kick-status").classList.add("offline");
   })
   .catch(err => console.error("Error al verificar estado en vivo:", err));
