@@ -1,48 +1,59 @@
-# 🔥 DissasterCL Multiverse - Live Streams United 🔥
+# 🎮 DissasterCL Multiverse - Simple Stream Hub
 
-Bienvenido a mi centro de transmisiones **multiplataforma**. Aquí puedes verme en **vivo** desde:
+Este sitio muestra en tiempo real mis transmisiones en vivo desde:
 
-🎮 **Twitch**  
-📺 **YouTube**  
-🚀 **Kick**  
-
----
-
-## 🌟 Características principales
-
-- ✅ Reproducción simultánea de transmisiones de 3 plataformas
-- 💬 Chats en vivo embebidos (activables individualmente)
-- 🌓 Modo oscuro/claro con ícono animado 🌙/☀️
-- 📱 Diseño **responsive** para móviles
-- 🖱️ Drag & Drop para reordenar streams
-- 🔴 Detecta automáticamente si estoy en vivo
+- 🟥 **YouTube**
+- 🟣 **Twitch**
+- 🟢 **Kick**
 
 ---
 
-## 📸 Redes Sociales
+## ✨ Características
 
-<div align="center">
+- 🌙 Modo oscuro fijo para una experiencia visual más agradable
+- 📱 Diseño adaptable para móviles y tablets
+- 🔴 Detección automática de transmisiones en vivo
+- 📺 Diseño limpio y sin distracciones
+- 🚫 Sin chats embebidos ni reordenamiento
 
-<a href="https://www.youtube.com/@dissasterCL" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" width="30" /></a>&nbsp;
-<a href="https://www.twitch.tv/dissastercl" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitch.svg" width="30" /></a>&nbsp;
-<a href="https://kick.com/dissastercl" target="_blank"><img src="https://raw.githubusercontent.com/wervlad/social-icons/main/kick.svg" width="30" /></a>&nbsp;
-<a href="https://facebook.com/dissastercl" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" width="30" /></a>&nbsp;
-<a href="https://x.com/dissastercl" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" width="30" /></a>&nbsp;
-<a href="https://www.instagram.com/dissastercl" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" width="30" /></a>
+---
+
+## 🌐 Visítame en redes sociales
+
+<div align="center" style="background-color:#121212">
+
+<a href="https://www.youtube.com/@dissasterCL" target="_blank">
+  <img src="https://raw.githubusercontent.com/detain/svg-social-icons/master/icons-white/youtube-white.svg" width="30" />
+</a>&nbsp;
+<a href="https://www.twitch.tv/dissastercl" target="_blank">
+  <img src="https://raw.githubusercontent.com/detain/svg-social-icons/master/icons-white/twitch-white.svg" width="30" />
+</a>&nbsp;
+<a href="https://kick.com/dissastercl" target="_blank">
+  <img src="https://raw.githubusercontent.com/wervlad/social-icons/main/kick.svg" width="30" />
+</a>&nbsp;
+<a href="https://facebook.com/dissastercl" target="_blank">
+  <img src="https://raw.githubusercontent.com/detain/svg-social-icons/master/icons-white/facebook-white.svg" width="30" />
+</a>&nbsp;
+<a href="https://x.com/dissastercl" target="_blank">
+  <img src="https://raw.githubusercontent.com/detain/svg-social-icons/master/icons-white/twitter-white.svg" width="30" />
+</a>&nbsp;
+<a href="https://www.instagram.com/dissastercl" target="_blank">
+  <img src="https://raw.githubusercontent.com/detain/svg-social-icons/master/icons-white/instagram-white.svg" width="30" />
+</a>
 
 </div>
 
 ---
 
-## 📦 ¿Cómo usar?
+## 🚀 ¿Cómo usar?
 
 1. Clona o descarga este repositorio
 2. Sube los archivos a tu cuenta de [GitHub Pages](https://pages.github.com/)
-3. ¡Listo! Accede a `https://TU_USUARIO.github.io/multistream`
+3. Accede al sitio desde: `https://TU_USUARIO.github.io/multistream`
 
 ---
 
-## 💡 Créditos
+## 🧠 Creado por
 
-Creado por **@dissasterCL**  
-Diseñado con ❤️ usando HTML, CSS y JS + Vercel API Backend
+**@dissasterCL** con HTML + CSS + JS  
+Backend Vercel para detectar transmisiones en vivo
