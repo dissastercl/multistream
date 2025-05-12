@@ -14,10 +14,11 @@ h1 {
 }
 .stream-grid {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
+  flex-wrap: nowrap;
+  gap: 20px;
   padding: 20px;
+  overflow-x: auto;
 }
 .stream-box {
   background: #222;
@@ -57,13 +58,16 @@ footer {
   flex-wrap: wrap;
 }
 .social-bar img {
-  filter: brightness(10);
+  filter: invert(1);
   transition: transform 0.2s ease;
 }
 .social-bar img:hover {
   transform: scale(1.2);
 }
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
+  .stream-grid {
+    flex-wrap: wrap;
+  }
   .stream-box {
     width: 100%;
     max-width: 90vw;
