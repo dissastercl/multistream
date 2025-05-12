@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DissasterCL Live!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🎮 DissasterCL Live!</h1>
+  </header>
+  <main id="stream-container" class="stream-grid">
+    <div class="stream-box" draggable="true" id="yt-box">
+      <span class="live-status" id="yt-status">🔴 YouTube</span>
+      <iframe id="youtube" src="https://www.youtube.com/embed/live_stream?channel=UCTIbvdnHSAmTfD7ChW6tbPA&autoplay=0" allowfullscreen></iframe>
+    </div>
+    <div class="stream-box" draggable="true" id="twitch-box">
+      <span class="live-status" id="twitch-status">🟣 Twitch</span>
+      <iframe id="twitch" src="https://player.twitch.tv/?channel=dissastercl&parent=github.io" allowfullscreen></iframe>
+    </div>
+    <div class="stream-box" draggable="true" id="kick-box">
+      <span class="live-status" id="kick-status">🟢 Kick</span>
+      <iframe id="kick" src="https://player.kick.com/dissastercl" allowfullscreen></iframe>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
