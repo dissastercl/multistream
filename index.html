@@ -11,28 +11,42 @@
   <header>
     <h1>🎮 DissasterCL Multiverse - Live Streams 🎮</h1>
   </header>
-  <main class="stream-grid">
-    <div class="stream-box" id="yt-box">
-      <span class="live-status" id="yt-status">🔴 YouTube</span>
-      <iframe src="https://www.youtube.com/embed/live_stream?channel=UCTIbvdnHSAmTfD7ChW6tbPA&autoplay=0" allowfullscreen></iframe>
-    </div>
-    <div class="stream-box" id="twitch-box">
-      <span class="live-status" id="twitch-status">🟣 Twitch</span>
-      <iframe src="https://player.twitch.tv/?channel=dissastercl&parent=github.io" allowfullscreen></iframe>
-    </div>
-    <div class="stream-box" id="kick-box">
-      <span class="live-status" id="kick-status">🟢 Kick</span>
-      <iframe src="https://player.kick.com/dissastercl" allowfullscreen></iframe>
-    </div>
-  </main>
+  <nav class="tabs">
+    <button class="tab-button active" data-tab="latest">Último Video</button>
+    <button class="tab-button" data-tab="live">Directos</button>
+  </nav>
+  <section id="latest" class="tab-content active">
+    <div id="latest-video" class="video-container">Cargando último video...</div>
+  </section>
+  <section id="live" class="tab-content">
+    <main class="stream-grid">
+      <div class="stream-box" id="yt-box">
+        <span class="live-status" id="yt-status">🔴 YouTube</span>
+        <iframe id="iframe-yt-live" src="https://www.youtube.com/embed/live_stream?channel=UCTIbvdnHSAmTfD7ChW6tbPA&autoplay=0" allowfullscreen></iframe>
+      </div>
+      <div class="stream-box" id="twitch-box">
+        <span class="live-status" id="twitch-status">🟣 Twitch</span>
+        <iframe src="https://player.twitch.tv/?channel=dissastercl&parent=github.io" allowfullscreen></iframe>
+      </div>
+      <div class="stream-box" id="kick-box">
+        <span class="live-status" id="kick-status">🟢 Kick</span>
+        <iframe src="https://player.kick.com/dissastercl" allowfullscreen></iframe>
+      </div>
+    </main>
+  </section>
+  <section class="support">
+    <h2>💖 Apóyame para mejorar los streams</h2>
+    <p>Si te gusta lo que hago y quieres ayudarme a seguir creciendo, cualquier aporte hace la diferencia 🙌.</p>
+    <a href="https://www.paypal.com/paypalme/gxlemus" class="donate-button" target="_blank">Donar vía PayPal</a>
+  </section>
   <footer>
     <div class="social-bar">
-      <a href="https://www.youtube.com/@dissasterCL" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube" width="24" /></a>
-      <a href="https://www.twitch.tv/dissastercl" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitch.svg" alt="Twitch" width="24" /></a>
-      <a href="https://kick.com/dissastercl" target="_blank"><img src="https://raw.githubusercontent.com/wervlad/social-icons/main/kick.svg" alt="Kick" width="24" /></a>
-      <a href="https://www.facebook.com/dissastercl" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook" width="24" /></a>
-      <a href="https://x.com/dissastercl" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X" width="24" /></a>
-      <a href="https://www.instagram.com/dissastercl" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram" width="24" /></a>
+      <a href="https://www.youtube.com/@dissasterCL" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" width="24" style="filter:invert(1)" alt="YouTube"/></a>
+      <a href="https://www.twitch.tv/dissastercl" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitch.svg" width="24" style="filter:invert(1)" alt="Twitch"/></a>
+      <a href="https://kick.com/dissastercl" target="_blank"><img src="https://raw.githubusercontent.com/wervlad/social-icons/main/kick.svg" width="24" style="filter:invert(1)" alt="Kick"/></a>
+      <a href="https://www.facebook.com/dissastercl" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" width="24" style="filter:invert(1)" alt="Facebook"/></a>
+      <a href="https://x.com/dissastercl" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" width="24" style="filter:invert(1)" alt="X"/></a>
+      <a href="https://www.instagram.com/dissastercl" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" width="24" style="filter:invert(1)" alt="Instagram"/></a>
     </div>
   </footer>
   <script src="script.js"></script>
