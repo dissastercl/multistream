@@ -1,51 +1,32 @@
-// Manejo de pestañas
-document.querySelectorAll('.tab-button').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
-    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-    btn.classList.add('active');
-    document.getElementById(btn.dataset.tab).classList.add('active');
-  });
+// Pestañas
+document.querySelectorAll('.tab-button').forEach(b=>{
+  b.onclick=()=>{document.querySelectorAll('.tab-button').forEach(x=>x.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active'); document.getElementById(b.dataset.tab).classList.add('active');
+  };
 });
-
-// Llamada al backend Vercel
-fetch("https://vercel-status-api.vercel.app/api/status")
-  .then(res => res.json())
-  .then(data => {
-    // Último video
-    const latest = document.getElementById("latest-video");
-    if (data.lastYoutubeVideoId) {
-      latest.innerHTML = `<iframe width="100%" height="360" src="https://www.youtube.com/embed/${data.lastYoutubeVideoId}" frameborder="0" allowfullscreen></iframe>`;
-    } else {
-      latest.innerHTML = `<p>No se encontró ningún video reciente.</p>`;
-    }
-
-    // YouTube live
-    const ys = document.getElementById("yt-status");
-    if (data.youtubeLive) {
-      ys.classList.add("live");
-      ys.textContent = "🟥 YouTube (EN VIVO)";
-    } else {
-      ys.classList.add("offline");
-      ys.textContent = "🔴 YouTube (OFFLINE)";
-    }
-
-    // Twitch live
-    const ts = document.getElementById("twitch-status");
-    if (data.twitchLive) {
-      ts.classList.add("live");
-      ts.textContent = "🟣 Twitch (EN VIVO)";
-    } else {
-      ts.classList.add("offline");
-      ts.textContent = "🟣 Twitch (OFFLINE)";
-    }
-
-    // Kick always offline
-    const ks = document.getElementById("kick-status");
-    ks.classList.add("offline");
-    ks.textContent = "🟢 Kick (OFFLINE)";
-  })
-  .catch(err => {
-    console.error(err);
-    document.getElementById("latest-video").innerHTML = `<p>Error al cargar datos.</p>`;
+// Último video
+fetch('https://vercel-status-api.vercel.app/api/status').then(r=>r.json()).then(d=>{
+  const lv=document.getElementById('latest-video');
+  if(d.lastYoutubeVideoId) lv.innerHTML=`<iframe src="https://www.youtube.com/embed/${d.lastYoutubeVideoId}" allowfullscreen></iframe>`;
+  else lv.innerHTML='<p>No hay video reciente.</p>';
+  // live statuses
+  document.getElementById('yt-status').textContent=d.youtubeLive?'🟥 YouTube (EN VIVO)':'🔴 YouTube (OFFLINE)';
+  document.getElementById('twitch-status').textContent=d.twitchLive?'🟣 Twitch (EN VIVO)':'🟣 Twitch (OFFLINE)';
+  document.getElementById('kick-status').textContent='🟢 Kick (OFFLINE)';
+}).catch(e=>{
+  document.getElementById('latest-video').innerHTML='<p>Error al cargar último video.</p>';
+});
+// Últimos 5 videos
+fetch(`https://www.googleapis.com/youtube/v3/search?key=${YOUTUBE_API_KEY}&channelId=${YOUTUBE_CHANNEL_ID}&part=snippet,id&order=date&maxResults=5`)
+.then(r=>r.json()).then(d=>{
+  const list=document.getElementById('video-list'); list.innerHTML='';
+  if(d.items) d.items.forEach(i=>{
+    const vid=i.id.videoId, url=`https://www.youtube.com/watch?v=${vid}`;
+    const a=document.createElement('a'); a.href=url; a.target='_blank';
+    a.innerHTML=`<img src="${i.snippet.thumbnails.medium.url}"><p>${i.snippet.title}</p>`;
+    list.append(a);
   });
+}).catch(e=>{
+  document.getElementById('video-list').innerHTML='<p>Error al cargar lista.</p>';
+});
