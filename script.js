@@ -1,4 +1,4 @@
-// Tabs functionality
+// Manejo de pestañas
 document.querySelectorAll('.tab-button').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
@@ -8,32 +8,48 @@ document.querySelectorAll('.tab-button').forEach(btn => {
   });
 });
 
-// Fetch from backend Vercel
-fetch("https://vercel-status-api.vercel.app/api/status")
+// Función principal: obtiene datos de tu backend Vercel
+fetch("https://dissastercl.vercel.app/api/status")
   .then(res => res.json())
   .then(data => {
-    // Latest YouTube video
+    // 1) Último video
+    const latestContainer = document.getElementById("latest-video");
     if (data.lastYoutubeVideoId) {
-      document.getElementById('latest-video').innerHTML =
-        `<iframe width="100%" height="360" src="https://www.youtube.com/embed/${data.lastYoutubeVideoId}" frameborder="0" allowfullscreen></iframe>`;
+      latestContainer.innerHTML = `
+        <iframe width="100%" height="360"
+          src="https://www.youtube.com/embed/${data.lastYoutubeVideoId}"
+          frameborder="0" allowfullscreen>
+        </iframe>`;
     } else {
-      document.getElementById('latest-video').textContent = "No se encontró último video.";
+      latestContainer.innerHTML = `<p>No se encontró ningún video reciente.</p>`;
     }
-    // Live statuses
+
+    // 2) Directos en vivo
+    const ytStatus = document.getElementById("yt-status");
     if (data.youtubeLive) {
-      const yt = document.getElementById("yt-status");
-      yt.classList.add("live");
-      yt.textContent = "🟥 YouTube (EN VIVO)";
+      ytStatus.classList.add("live");
+      ytStatus.textContent = "🟥 YouTube (EN VIVO)";
     } else {
-      document.getElementById("yt-status").classList.add("offline");
+      ytStatus.classList.add("offline");
+      ytStatus.textContent = "🔴 YouTube (OFFLINE)";
     }
+
+    const twitchStatus = document.getElementById("twitch-status");
     if (data.twitchLive) {
-      const tw = document.getElementById("twitch-status");
-      tw.classList.add("live");
-      tw.textContent = "🟣 Twitch (EN VIVO)";
+      twitchStatus.classList.add("live");
+      twitchStatus.textContent = "🟣 Twitch (EN VIVO)";
     } else {
-      document.getElementById("twitch-status").classList.add("offline");
+      twitchStatus.classList.add("offline");
+      twitchStatus.textContent = "🟣 Twitch (OFFLINE)";
     }
-    document.getElementById("kick-status").classList.add("offline");
+
+    // Kick no ofrece estado via API en tu backend, siempre mostrar offline
+    const kickStatus = document.getElementById("kick-status");
+    kickStatus.classList.add("offline");
+    kickStatus.textContent = "🟢 Kick (OFFLINE)";
   })
-  .catch(err => console.error("Error al obtener data del backend:", err));
+  .catch(err => {
+    console.error("Error al llamar al backend:", err);
+    document.getElementById("latest-video").innerHTML =
+      `<p>Error al cargar datos. Intenta recargar la página.</p>`;
+  });
