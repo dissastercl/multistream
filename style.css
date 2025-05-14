@@ -57,17 +57,21 @@ h1 {
 /* Lista de últimos 5 videos */
 .recent-videos {
   margin-top: 20px;
-  text-align: left;
+  text-align: center;      /* centra el título */
 }
 .recent-videos h3 {
   color: #0f0;
   margin-bottom: 10px;
+  text-align: center;      /* refuerza el centrado */
 }
 .video-list {
   display: flex;
+  justify-content: center; /* centra los items en la fila */
   gap: 10px;
   overflow-x: auto;
   padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .video-list a {
   flex: 0 0 auto;
