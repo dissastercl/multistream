@@ -9,32 +9,61 @@
 </head>
 <body>
   <header><h1>🎮 DissasterCL Multiverse - Live Streams 🎮</h1></header>
+
   <nav class="tabs">
     <button class="tab-button active" data-tab="latest">Último Video</button>
     <button class="tab-button" data-tab="live">Directos</button>
   </nav>
 
+  <!-- Pestaña Último Video -->
   <section id="latest" class="tab-content active">
-    <div id="latest-video" class="video-container"><p>Cargando último video…</p></div>
+    <div id="latest-video" class="video-container">
+      <p>Cargando último video…</p>
+    </div>
     <div class="recent-videos">
       <h3>Últimos videos</h3>
-      <div id="video-list" class="video-list"><p>Cargando lista…</p></div>
+      <div id="video-list" class="video-list">
+        <p>Cargando lista…</p>
+      </div>
     </div>
   </section>
 
+  <!-- Pestaña Directos -->
   <section id="live" class="tab-content">
     <div class="stream-grid">
-      <div class="stream-box"><span id="yt-status">🔴 YouTube</span>
+      <div class="stream-box">
+        <span id="yt-status" class="live-status">🔴 YouTube</span>
         <iframe src="https://www.youtube.com/embed/live_stream?channel=UCTIbvdnHSAmTfD7ChW6tbPA" allowfullscreen></iframe>
       </div>
-      <div class="stream-box"><span id="twitch-status">🟣 Twitch</span>
+      <div class="stream-box">
+        <span id="twitch-status" class="live-status">🟣 Twitch</span>
         <iframe src="https://player.twitch.tv/?channel=dissastercl&parent=vercel-status-api.vercel.app" allowfullscreen></iframe>
       </div>
-      <div class="stream-box"><span id="kick-status">🟢 Kick</span>
+      <div class="stream-box">
+        <span id="kick-status" class="live-status">🟢 Kick</span>
         <iframe src="https://player.kick.com/dissastercl" allowfullscreen></iframe>
       </div>
     </div>
   </section>
+
+  <!-- Sección de donaciones -->
+  <section class="support">
+    <h2>💖 Apóyame para mejorar los streams</h2>
+    <p>Si te gusta lo que hago y quieres ayudarme a seguir creciendo, cualquier aporte hace la diferencia 🙌.</p>
+    <a href="https://www.paypal.com/paypalme/gxlemus" class="donate-button" target="_blank">Donar vía PayPal</a>
+  </section>
+
+  <!-- Pie de página con redes -->
+  <footer>
+    <div class="social-bar">
+      <a href="https://www.youtube.com/@dissasterCL" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube"/></a>
+      <a href="https://www.twitch.tv/dissastercl" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitch.svg" alt="Twitch"/></a>
+      <a href="https://kick.com/dissastercl" target="_blank"><img src="https://raw.githubusercontent.com/wervlad/social-icons/main/kick.svg" alt="Kick"/></a>
+      <a href="https://www.facebook.com/dissastercl" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook"/></a>
+      <a href="https://x.com/dissastercl" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X"/></a>
+      <a href="https://www.instagram.com/dissastercl" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram"/></a>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
