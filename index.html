@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🎮 DissasterCL Multiverse - Live Streams 🎮</title>
-<link rel="stylesheet" href="style.css"><link rel="icon" href="favicon.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🎮 DissasterCL Multiverse - Live Streams 🎮</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="icon" href="favicon.png"/>
 </head>
 <body>
-<header><h1>🎮 DissasterCL Multiverse - Live Streams 🎮</h1></header>
-<nav class="tabs">
-  <button class="tab-button active" data-tab="latest">Último Video</button>
-  <button class="tab-button" data-tab="live">Directos</button>
-</nav>
-<section id="latest" class="tab-content active">
-  <div id="latest-video" class="video-container"><p>Cargando último video...</p></div>
-  <div class="recent-videos">
-    <h3>Últimos videos</h3>
-    <div id="video-list" class="video-list"><p>Cargando videos...</p></div>
-  </div>
-</section>
-<section id="live" class="tab-content">
-  <div class="stream-grid">
-    <div class="stream-box"><span id="yt-status">🔴 YouTube</span>
-      <iframe src="https://www.youtube.com/embed/live_stream?channel=UCTIbvdnHSAmTfD7ChW6tbPA"></iframe>
+  <header><h1>🎮 DissasterCL Multiverse - Live Streams 🎮</h1></header>
+  <nav class="tabs">
+    <button class="tab-button active" data-tab="latest">Último Video</button>
+    <button class="tab-button" data-tab="live">Directos</button>
+  </nav>
+
+  <section id="latest" class="tab-content active">
+    <div id="latest-video" class="video-container"><p>Cargando último video…</p></div>
+    <div class="recent-videos">
+      <h3>Últimos videos</h3>
+      <div id="video-list" class="video-list"><p>Cargando lista…</p></div>
     </div>
-    <div class="stream-box"><span id="twitch-status">🟣 Twitch</span>
-      <iframe src="https://player.twitch.tv/?channel=dissastercl&parent=vercel-status-api.vercel.app"></iframe>
+  </section>
+
+  <section id="live" class="tab-content">
+    <div class="stream-grid">
+      <div class="stream-box"><span id="yt-status">🔴 YouTube</span>
+        <iframe src="https://www.youtube.com/embed/live_stream?channel=UCTIbvdnHSAmTfD7ChW6tbPA" allowfullscreen></iframe>
+      </div>
+      <div class="stream-box"><span id="twitch-status">🟣 Twitch</span>
+        <iframe src="https://player.twitch.tv/?channel=dissastercl&parent=vercel-status-api.vercel.app" allowfullscreen></iframe>
+      </div>
+      <div class="stream-box"><span id="kick-status">🟢 Kick</span>
+        <iframe src="https://player.kick.com/dissastercl" allowfullscreen></iframe>
+      </div>
     </div>
-    <div class="stream-box"><span id="kick-status">🟢 Kick</span>
-      <iframe src="https://player.kick.com/dissastercl"></iframe>
-    </div>
-  </div>
-</section>
-<script src="config.js"></script><script src="script.js"></script>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
