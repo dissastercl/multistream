@@ -1,43 +1,38 @@
 // Pestañas
-document.querySelectorAll('.tab-button').forEach(btn => {
-  btn.onclick = () => {
-    document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
-    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+document.querySelectorAll('.tab-button').forEach(btn=>{
+  btn.onclick=()=>{
+    document.querySelectorAll('.tab-button').forEach(b=>b.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));
     btn.classList.add('active');
     document.getElementById(btn.dataset.tab).classList.add('active');
   };
 });
 
-// Fetch al backend Vercel
+// Fetch datos
 fetch('https://vercel-status-api.vercel.app/api/status')
-  .then(res => res.json())
-  .then(data => {
-    // Último video
-    const lv = document.getElementById('latest-video');
-    if (data.lastYoutubeVideoId) {
-      lv.innerHTML = `<iframe src="https://www.youtube.com/embed/${data.lastYoutubeVideoId}" allowfullscreen></iframe>`;
-    } else {
-      lv.innerHTML = '<p>No se encontró ningún video reciente.</p>';
-    }
+  .then(r=>r.json())
+  .then(data=>{
+    // YouTube
+    const yv=document.getElementById('latest-video');
+    yv.innerHTML = data.lastYoutubeVideoId 
+      ? `<iframe src="https://www.youtube.com/embed/${data.lastYoutubeVideoId}" allowfullscreen></iframe>` 
+      : '<p>No hay video reciente.</p>';
 
-    // Últimos 5 videos
-    const list = document.getElementById('video-list');
-    list.innerHTML = '';
-    (data.lastYoutubeVideos || []).forEach(v => {
-      const a = document.createElement('a');
-      a.href = `https://youtu.be/${v.videoId}`;
-      a.target = '_blank';
-      a.innerHTML = `<img src="${v.thumbnail}" alt=""><p>${v.title}</p>`;
-      list.appendChild(a);
-    });
+    // Twitch VOD
+    const tv=document.getElementById('latest-twitch-vod');
+    tv.innerHTML = data.lastTwitchVodId
+      ? `<iframe src="https://player.twitch.tv/?video=${data.lastTwitchVodId}&parent=vercel-status-api.vercel.app" allowfullscreen></iframe>`
+      : '<p>No hay VOD reciente.</p>';
 
-    // Directos
-    document.getElementById('yt-status').textContent = data.youtubeLive ? '🟥 YouTube (EN VIVO)' : '🔴 YouTube (OFFLINE)';
-    document.getElementById('twitch-status').textContent = data.twitchLive ? '🟣 Twitch (EN VIVO)' : '🟣 Twitch (OFFLINE)';
+    // Kick VOD
+    const kv=document.getElementById('latest-kick-vod');
+    kv.innerHTML = data.lastKickVodId
+      ? `<iframe src="https://player.kick.com/embed/video/${data.lastKickVodId}" allowfullscreen></iframe>`
+      : '<p>No hay VOD reciente.</p>';
+
+    // Directos status
+    document.getElementById('yt-status').textContent = data.youtubeLive?'🟥 YouTube (EN VIVO)':'🔴 YouTube (OFFLINE)';
+    document.getElementById('twitch-status').textContent = data.twitchLive?'🟣 Twitch (EN VIVO)':'🟣 Twitch (OFFLINE)';
     document.getElementById('kick-status').textContent = '🟢 Kick (OFFLINE)';
   })
-  .catch(err => {
-    console.error(err);
-    document.getElementById('latest-video').innerHTML = '<p>Error al cargar los datos.</p>';
-    document.getElementById('video-list').innerHTML = '<p>Error al cargar la lista.</p>';
-  });
+  .catch(console.error);
