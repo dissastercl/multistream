@@ -9,7 +9,7 @@ document.querySelectorAll('.tab-button').forEach(btn => {
 });
 
 // Función principal: obtiene datos de tu backend Vercel
-fetch("https://dissastercl.vercel.app/api/status")
+fetch("https://vercel-status-api.vercel.app/api/status")
   .then(res => res.json())
   .then(data => {
     // 1) Último video
